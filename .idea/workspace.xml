@@ -30,7 +30,28 @@
       <recent name="$PROJECT_DIR$/chessart" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Chessgame3 (1)">
+    <configuration name="Chessgame3 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DSA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Chess-PyTorch" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Chess-PyTorch/Chessgame3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Chessgame3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DSA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,6 +139,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Chessgame3 (1)" />
         <item itemvalue="Python.Chessgame3" />
       </list>
     </recent_temporary>
@@ -148,26 +170,34 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1379" height="208" key="GridCell.Tab.0.bottom" timestamp="1575917053804">
-      <screen x="0" y="23" width="1440" height="812" />
+    <state width="1379" height="208" key="GridCell.Tab.0.bottom" timestamp="1575995320020">
+      <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state width="1379" height="208" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1575917053804" />
     <state width="1379" height="208" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1575914982898" />
-    <state width="1379" height="208" key="GridCell.Tab.0.center" timestamp="1575917053803">
-      <screen x="0" y="23" width="1440" height="812" />
+    <state width="1379" height="208" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1575995320020" />
+    <state width="1379" height="208" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1575995069740" />
+    <state width="1379" height="208" key="GridCell.Tab.0.center" timestamp="1575995320018">
+      <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state width="1379" height="208" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1575917053803" />
     <state width="1379" height="208" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1575914982896" />
-    <state width="1379" height="208" key="GridCell.Tab.0.left" timestamp="1575917053802">
-      <screen x="0" y="23" width="1440" height="812" />
+    <state width="1379" height="208" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1575995320018" />
+    <state width="1379" height="208" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1575995069739" />
+    <state width="1379" height="208" key="GridCell.Tab.0.left" timestamp="1575995320018">
+      <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state width="1379" height="208" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1575917053802" />
     <state width="1379" height="208" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1575914982895" />
-    <state width="1379" height="208" key="GridCell.Tab.0.right" timestamp="1575917053803">
-      <screen x="0" y="23" width="1440" height="812" />
+    <state width="1379" height="208" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1575995320018" />
+    <state width="1379" height="208" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1575995069737" />
+    <state width="1379" height="208" key="GridCell.Tab.0.right" timestamp="1575995320019">
+      <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state width="1379" height="208" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1575917053803" />
     <state width="1379" height="208" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1575914982897" />
+    <state width="1379" height="208" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1575995320019" />
+    <state width="1379" height="208" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1575995069740" />
     <state x="249" y="69" key="SettingsEditor" timestamp="1575723102780">
       <screen x="0" y="23" width="1440" height="816" />
     </state>

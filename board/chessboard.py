@@ -6,6 +6,7 @@ from pieces.pawn import Pawn
 from pieces.queen import Queen
 from pieces.rook import Rook
 from pieces.knight import Knight
+
 class Board:
     gameTiles = {}
     def __init__(self):

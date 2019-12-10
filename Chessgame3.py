@@ -2,7 +2,7 @@ import pygame
 from board.chessboard import Board
 
 pygame.init()
-Display = pygame.display.set_mode((500,500))
+Display = pygame.display.set_mode((800,800))
 pygame.display.set_caption("ChessGame")
 Clock = pygame.time.Clock()
 QuiteGame = False
@@ -11,23 +11,25 @@ chessBoard.createBoard()
 chessBoard.printB()
 allTitles=[]
 allPieces=[]
+#___________________________________________________________________________________________________________________________________#
 def square(x,y,width,height,color):
     pygame.draw.rect(Display,color,[x,y,width,height])
     allTitles.append([color, [x, y, width, height]])
+
 def draw_chess_pieces():
     x_position = 0
     y_position = 0
     Width = 100
     Height = 100
     color = 0
-    Black = (0,0,0)
-    White = (255,255,255)
+    Black = (115,0,0)
+    White = (255,100,10)
     number = 0
     for x in range(8):
         for y in range(8):
             if color % 2 == 0:
-                square(x_position,y_position,Height,Width,White)
-                if not chessBoard.gameTiles[number].pieceOnTile.toString == "-":
+                square(x_position,y_position,Width,Height,White)
+                if not chessBoard.gameTiles[number].pieceOnTile.toString() == "-":
                     img = pygame.image.load("./chessart/"
                                             + chessBoard.gameTiles[number].pieceOnTile.alliance[0].upper()
                                             + chessBoard.gameTiles[number].pieceOnTile.toString().upper()
@@ -38,7 +40,7 @@ def draw_chess_pieces():
 
             else:
                 square(x_position, y_position, Height, Width, Black)
-                if not chessBoard.gameTiles[number].pieceOnTile.toString == "-":
+                if not chessBoard.gameTiles[number].pieceOnTile.toString() == "-":
                     img = pygame.image.load("./chessart/"
                                             + chessBoard.gameTiles[number].pieceOnTile.alliance[0].upper()
                                             + chessBoard.gameTiles[number].pieceOnTile.toString().upper() +
@@ -53,13 +55,14 @@ def draw_chess_pieces():
         y_position+=100
 
 draw_chess_pieces()
-
 while not QuiteGame:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             QuiteGame = True
             pygame.quit()
             quit()
+    for img in allPieces:
+        Display.blit(img[0], img[1])
 
     pygame.display.update()
     Clock.tick(60)
