@@ -1,68 +1,225 @@
 import pygame
+
 from board.chessboard import Board
+from board.move import Move
+
 
 pygame.init()
-Display = pygame.display.set_mode((800,800))
-pygame.display.set_caption("ChessGame")
-Clock = pygame.time.Clock()
-QuiteGame = False
-chessBoard= Board()
-chessBoard.createBoard()
-chessBoard.printB()
-allTitles=[]
-allPieces=[]
-#___________________________________________________________________________________________________________________________________#
-def square(x,y,width,height,color):
-    pygame.draw.rect(Display,color,[x,y,width,height])
-    allTitles.append([color, [x, y, width, height]])
+gameDisplay = pygame.display.set_mode((800, 800))
+pygame.display.set_caption("PyChess")
+clock = pygame.time.Clock()
 
-def draw_chess_pieces():
-    x_position = 0
-    y_position = 0
-    Width = 100
-    Height = 100
+firstBoard = Board()
+firstBoard.createBoard()
+# firstBoard.printBoard()
+
+allTiles = []
+allPieces = []
+currentPlayer = firstBoard.currentPlayer
+
+def createSqParams():
+    allSqRanges = []
+    xMin = 0
+    xMax = 100
+    yMin = 0
+    yMax = 100
+    for _ in range(8):
+        for _ in range(8):
+            allSqRanges.append([xMin, xMax, yMin, yMax])
+            xMin += 100
+            xMax += 100
+        xMin = 0
+        xMax = 100
+        yMin += 100
+        yMax += 100
+    return allSqRanges
+
+def squares(x, y, w, h, color):
+    pygame.draw.rect(gameDisplay, color, [x, y, w, h])
+    allTiles.append([color, [x, y, w, h]])
+
+def drawChessPieces():
+    xpos = 0
+    ypos = 0
     color = 0
+    width = 100
+    height = 100
     Black = (115,0,0)
     White = (255,100,10)
     number = 0
-    for x in range(8):
-        for y in range(8):
+    for _ in range(8):
+        for _ in range(8):
             if color % 2 == 0:
-                square(x_position,y_position,Width,Height,White)
-                if not chessBoard.gameTiles[number].pieceOnTile.toString() == "-":
-                    img = pygame.image.load("./chessart/"
-                                            + chessBoard.gameTiles[number].pieceOnTile.alliance[0].upper()
-                                            + chessBoard.gameTiles[number].pieceOnTile.toString().upper()
-                                            + ".png")
-                    img = pygame.transform.scale(img,(100,100)) #reform the image
-                    allPieces.append([img,[x_position,y_position],chessBoard.gameTiles[number].pieceOnTile])
-                x_position += 100
-
+                squares(xpos, ypos, width, height, White)
+                if not firstBoard.gameTiles[number].pieceOnTile.toString() == "-":
+                    img = pygame.image.load("./ChessArt/" + firstBoard.gameTiles[number].pieceOnTile.alliance[0].upper() + firstBoard.gameTiles[
+                        number].pieceOnTile.toString().upper() + ".png")
+                    img = pygame.transform.scale(img, (100, 100))
+                    allPieces.append([img, [xpos, ypos], firstBoard.gameTiles[number].pieceOnTile])
+                xpos += 100
             else:
-                square(x_position, y_position, Height, Width, Black)
-                if not chessBoard.gameTiles[number].pieceOnTile.toString() == "-":
-                    img = pygame.image.load("./chessart/"
-                                            + chessBoard.gameTiles[number].pieceOnTile.alliance[0].upper()
-                                            + chessBoard.gameTiles[number].pieceOnTile.toString().upper() +
-                                            ".png")
-                    img = pygame.transform.scale(img,(100, 100))  # reform the image
-                    allPieces.append([img, [x_position, y_position], chessBoard.gameTiles[number].pieceOnTile])
-                x_position += 100
-            color+=1
-            number+=1
-        color+=1
-        x_position=0
-        y_position+=100
+                squares(xpos, ypos, width, height, Black)
+                if not firstBoard.gameTiles[number].pieceOnTile.toString() == "-":
+                    img = pygame.image.load("./ChessArt/" + firstBoard.gameTiles[number].pieceOnTile.alliance[0].upper() + firstBoard.gameTiles[
+                        number].pieceOnTile.toString().upper() + ".png")
+                    img = pygame.transform.scale(img, (100, 100))
+                    allPieces.append([img, [xpos, ypos], firstBoard.gameTiles[number].pieceOnTile])
+                xpos += 100
 
-draw_chess_pieces()
-while not QuiteGame:
+            color += 1
+            number += 1
+        color += 1
+        xpos = 0
+        ypos += 100
+
+
+
+def updateChessPieces():
+
+    xpos = 0
+    ypos = 0
+    number = 0
+    newPieces = []
+
+    for _ in range(8):
+        for _ in range(8):
+            if not firstBoard.gameTiles[number].pieceOnTile.toString() == "-":
+
+                img = pygame.image.load(
+                    "./ChessArt/" + firstBoard.gameTiles[number].pieceOnTile.alliance[0].upper() + firstBoard.gameTiles[
+                        number].pieceOnTile.toString().upper() + ".png")
+                img = pygame.transform.scale(img, (100, 100))
+
+                newPieces.append([img, [xpos, ypos], firstBoard.gameTiles[number].pieceOnTile])
+            xpos += 100
+            number += 1
+        xpos = 0
+        ypos += 100
+
+    return newPieces
+
+
+allSqParams = createSqParams()
+drawChessPieces()
+
+
+selectedImage = None
+selectedLegals = None
+resetColors = []
+quitGame = False
+mx, my = pygame.mouse.get_pos()
+prevx, prevy = [0,0]
+while not quitGame:
+
     for event in pygame.event.get():
+
         if event.type == pygame.QUIT:
-            QuiteGame = True
+            quitGame = True
             pygame.quit()
             quit()
+
+        if event.type == pygame.MOUSEBUTTONDOWN:
+
+            if selectedImage == None:
+                mx, my = pygame.mouse.get_pos()
+                for piece in range(len(allPieces)):
+
+                    if allPieces[piece][2].alliance == currentPlayer:
+
+                        if allPieces[piece][1][0] < mx < allPieces[piece][1][0]+100:
+                            if allPieces[piece][1][1] < my < allPieces[piece][1][1] + 100:
+                                selectedImage = piece
+                                prevx = allPieces[piece][1][0]
+                                prevy = allPieces[piece][1][1]
+
+                                selectedLegals = allPieces[selectedImage][2].calculateLegalMoves(firstBoard)
+                                for legals in selectedLegals:
+                                    resetColors.append([legals, allTiles[legals][0]])
+
+
+                                    if allTiles[legals][0] == (66,134,244):
+                                        allTiles[legals][0] = (135, 46, 40)
+                                    else:
+                                        allTiles[legals][0] = (183, 65, 56)
+
+
+        if event.type == pygame.MOUSEMOTION and not selectedImage == None:
+
+            mx, my = pygame.mouse.get_pos()
+            allPieces[selectedImage][1][0] = mx-50
+            allPieces[selectedImage][1][1] = my-50
+
+            # #TODO highlight all legal moves
+            # selectedLegals = allPieces[selectedImage][2].calculateLegalMoves(firstBoard)
+            # for legals in selectedLegals:
+            #     resetColors.append([legals ,allTiles[legals][0]])
+            #
+
+
+        if event.type == pygame.MOUSEBUTTONUP:
+
+            for resets in resetColors:
+                allTiles[resets[0]][0] = resets[1]
+
+            try:
+
+
+
+                pieceMoves = allPieces[selectedImage][2].calculateLegalMoves(firstBoard)
+                legal = False
+                theMove = 0
+                for moveDes in pieceMoves:
+                    if allSqParams[moveDes][0] < allPieces[selectedImage][1][0]+50 < allSqParams[moveDes][1]:
+                        if allSqParams[moveDes][2] < allPieces[selectedImage][1][1]+50 < allSqParams[moveDes][3]:
+                            legal = True
+                            theMove = moveDes
+                if legal == False:
+                    allPieces[selectedImage][1][0] = prevx
+                    allPieces[selectedImage][1][1] = prevy
+                else:
+                    allPieces[selectedImage][1][0] = allSqParams[theMove][0]
+                    allPieces[selectedImage][1][1] = allSqParams[theMove][2]
+
+
+                    # TODO make it so it updates board
+                    # TODO update moved piece's legal moves some how
+                    # print(allPieces[selectedImage][2])
+                    # print(theMove)
+                    # print(firstBoard)
+                    thisMove = Move(firstBoard, allPieces[selectedImage][2], theMove)
+                    newBoard = thisMove.createNewBoard()
+                    if not newBoard == False:
+                        firstBoard = newBoard
+                    # else:
+                    #     print(newBoard)
+                    #firstBoard.printBoard()
+
+                    # TODO update game pieces
+                    newP = updateChessPieces()
+                    allPieces = newP
+                    #print(len(newP))
+
+                    #print(firstBoard.currentPlayer)
+                    currentPlayer = newBoard.currentPlayer
+
+            except:
+                pass
+
+            prevy = 0
+            prevx = 0
+            selectedImage = None
+
+        #print(event)
+
+    gameDisplay.fill((255, 255, 255))
+
+    for info in allTiles:
+        pygame.draw.rect(gameDisplay, info[0], info[1])
+
     for img in allPieces:
-        Display.blit(img[0], img[1])
+        gameDisplay.blit(img[0], img[1])
+
+
 
     pygame.display.update()
-    Clock.tick(60)
+    clock.tick(60)

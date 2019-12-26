@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f01e63c-1bd2-4267-85d2-5d73502c2915" name="Default Changelist" comment="" />
+    <list default="true" id="3f01e63c-1bd2-4267-85d2-5d73502c2915" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chessgame3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chessgame3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/board/chessboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/board/chessboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/board/move.py" beforeDir="false" afterPath="$PROJECT_DIR$/board/move.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pieces/bishop.py" beforeDir="false" afterPath="$PROJECT_DIR$/pieces/bishop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pieces/king.py" beforeDir="false" afterPath="$PROJECT_DIR$/pieces/king.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pieces/knight.py" beforeDir="false" afterPath="$PROJECT_DIR$/pieces/knight.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pieces/pawn.py" beforeDir="false" afterPath="$PROJECT_DIR$/pieces/pawn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pieces/piece.py" beforeDir="false" afterPath="$PROJECT_DIR$/pieces/piece.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pieces/queen.py" beforeDir="false" afterPath="$PROJECT_DIR$/pieces/queen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pieces/rook.py" beforeDir="false" afterPath="$PROJECT_DIR$/pieces/rook.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +26,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UehU9E34khf0HEXbigDDHLljGE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,7 +37,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/chessart" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -39,11 +54,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Chess-PyTorch" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Chess-PyTorch/Chessgame3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Chessgame3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -71,70 +86,6 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="DSA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="DSA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="DSA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <module name="DSA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -170,34 +121,34 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1379" height="208" key="GridCell.Tab.0.bottom" timestamp="1575995320020">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1389" height="207" key="GridCell.Tab.0.bottom" timestamp="1576481685153">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
-    <state width="1379" height="208" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1575917053804" />
-    <state width="1379" height="208" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1575914982898" />
-    <state width="1379" height="208" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1575995320020" />
-    <state width="1379" height="208" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1575995069740" />
-    <state width="1379" height="208" key="GridCell.Tab.0.center" timestamp="1575995320018">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1389" height="207" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1576481685153" />
+    <state width="1389" height="207" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1576412326369" />
+    <state width="1389" height="207" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1576414447170" />
+    <state width="1389" height="207" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1576414133502" />
+    <state width="1389" height="207" key="GridCell.Tab.0.center" timestamp="1576481685152">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
-    <state width="1379" height="208" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1575917053803" />
-    <state width="1379" height="208" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1575914982896" />
-    <state width="1379" height="208" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1575995320018" />
-    <state width="1379" height="208" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1575995069739" />
-    <state width="1379" height="208" key="GridCell.Tab.0.left" timestamp="1575995320018">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1389" height="207" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1576481685152" />
+    <state width="1389" height="207" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1576412326366" />
+    <state width="1389" height="207" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1576414447169" />
+    <state width="1389" height="207" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1576414133501" />
+    <state width="1389" height="207" key="GridCell.Tab.0.left" timestamp="1576481685151">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
-    <state width="1379" height="208" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1575917053802" />
-    <state width="1379" height="208" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1575914982895" />
-    <state width="1379" height="208" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1575995320018" />
-    <state width="1379" height="208" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1575995069737" />
-    <state width="1379" height="208" key="GridCell.Tab.0.right" timestamp="1575995320019">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1389" height="207" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1576481685151" />
+    <state width="1389" height="207" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1576412326365" />
+    <state width="1389" height="207" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1576414447168" />
+    <state width="1389" height="207" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1576414133500" />
+    <state width="1389" height="207" key="GridCell.Tab.0.right" timestamp="1576481685152">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
-    <state width="1379" height="208" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1575917053803" />
-    <state width="1379" height="208" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1575914982897" />
-    <state width="1379" height="208" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1575995320019" />
-    <state width="1379" height="208" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1575995069740" />
+    <state width="1389" height="207" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1576481685152" />
+    <state width="1389" height="207" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1576412326368" />
+    <state width="1389" height="207" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1576414447170" />
+    <state width="1389" height="207" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1576414133501" />
     <state x="249" y="69" key="SettingsEditor" timestamp="1575723102780">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
